@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Registered Students</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Registered Students</h1>
+      <nav>
+        <a href="index.html">Register new student</a>
+      </nav>
+    </header>
+
+    <main>
+      <section id="student-records">
+        <div style="margin-bottom: 1rem">
+          <label for="student-filter">Filtruoti studentus:</label>
+          <input
+            type="text"
+            id="student-filter"
+            placeholder="kursas, ID, vardas arba pavardė"
+            style="width: 280px; padding: 0.4rem"
+          />
+        </div>
+
+        <table>
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>ID</th>
+              <th>Mokomas dalykas</th>
+              <th>Kursas</th>
+              <th>Email</th>
+              <th>Contact</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody id="records-container"></tbody>
+        </table>
+      </section>
+    </main>
+
+    <script src="students.js"></script>
+  </body>
+</html>

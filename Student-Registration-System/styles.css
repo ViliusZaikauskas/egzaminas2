@@ -1,0 +1,241 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: #4caf50;
+  color: white;
+  text-align: center;
+  padding: 1em 0;
+}
+
+header p {
+  margin: 0 auto;
+  width: 60%;
+  margin-bottom: 20px;
+}
+
+nav a {
+  color: white;
+  margin: 0 10px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+main {
+  margin: 20px;
+}
+
+#registration-form {
+  margin-bottom: 20px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  max-width: 400px;
+  margin: auto;
+}
+
+label {
+  margin-top: 10px;
+  font-weight: bold;
+  color: #333;
+}
+
+input {
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  transition: border-color 0.3s;
+}
+
+input:focus {
+  border-color: #4caf50;
+  outline: none;
+}
+
+button {
+  margin-top: 20px;
+  padding: 10px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+#student-records {
+  margin-top: 40px;
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 20px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow-x: auto; /* Allow horizontal scroll */
+}
+
+#student-records table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+#student-records thead {
+  background-color: #4caf50;
+  color: white;
+}
+
+#student-records th,
+#student-records td {
+  padding: 10px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+  word-wrap: break-word; /* Ensure long words break into the next line */
+}
+
+#student-records tbody {
+  display: block;
+  max-height: 300px; /* Fixed height */
+  overflow-y: auto; /* Enable vertical scrollbar */
+}
+
+#student-records thead,
+#student-records tbody tr {
+  display: table;
+  width: 100%;
+  table-layout: fixed;
+}
+
+td button {
+  margin-left: 10px;
+  padding: 5px;
+  background-color: #f44336;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+td button:hover {
+  background-color: #e53935;
+}
+
+td button:first-child {
+  background-color: #4caf50;
+}
+
+td button:first-child:hover {
+  background-color: #45a049;
+}
+
+.editing {
+  background-color: #ffeb3b !important;
+}
+
+/* Responsive Design for Smaller Screens */
+@media (max-width: 600px) {
+  header h1 {
+    font-size: 24px;
+  }
+
+  header p {
+    width: 90%;
+  }
+
+  main {
+    margin: 10px;
+  }
+
+  form {
+    max-width: 100%;
+  }
+
+  #student-records {
+    padding: 10px;
+  }
+
+  #student-records table,
+  #student-records thead,
+  #student-records tbody,
+  #student-records th,
+  #student-records td,
+  #student-records tr {
+    display: block;
+  }
+
+  #student-records tbody {
+    max-height: unset;
+  }
+
+  #student-records td:nth-of-type(5) {
+    display: flex;
+  }
+
+  #student-records thead tr {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+  }
+
+  #student-records tr {
+    margin: 0 0 10px 0;
+  }
+
+  #student-records tr:nth-child(odd) {
+    background: #f2f2f2;
+  }
+
+  #student-records td {
+    border: none;
+    position: relative;
+    padding-left: 50%;
+    text-align: left;
+    white-space: pre-wrap; /* Ensure text wraps within its container */
+  }
+
+  #student-records td:before {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    width: 45%;
+    padding-right: 10px;
+    white-space: nowrap;
+    transform: translateY(-50%);
+    font-weight: bold;
+  }
+
+  #student-records td:nth-of-type(1):before {
+    content: "Name";
+  }
+  #student-records td:nth-of-type(2):before {
+    content: "ID";
+  }
+  #student-records td:nth-of-type(3):before {
+    content: "Email";
+  }
+  #student-records td:nth-of-type(4):before {
+    content: "Contact";
+  }
+  #student-records td:nth-of-type(5):before {
+    content: "Actions";
+  }
+}
